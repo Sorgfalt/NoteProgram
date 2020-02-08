@@ -43,8 +43,9 @@ fun inputCheck(input: String) {
 
         }
         Note.DELETE -> {
-            println(list.toString() + "값의 리스트가 있습니다 무엇을 삭제 하겠습니까? :")
-            println(list.remove(input()))
+            println(list.toString() + "값의 리스트가 있습니다 몇번을 삭제 하겠습니까? :")
+            val result = list.removeAt(input().toInt())
+            println(result + "가 삭제 되었습니다.")
         }
         else -> print("값을 다시 입력해주세요!")
     }
